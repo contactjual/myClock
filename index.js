@@ -1,0 +1,1 @@
+alert("The app is updating now")
