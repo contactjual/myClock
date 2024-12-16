@@ -13,9 +13,15 @@ function secManage() {
     const getHourElement = document.getElementById('time-hour');
     getHourElement.innerText = myDate.getHours();
 
-    // day
-    const getDayElement = document.getElementById('date-day');
-    getDayElement.innerText = myDate.getDate();
+    // day 
+    const getDayElement = document.getElementById('day-day');
+    const myDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const daysIndex = myDate.getDay();
+    getDayElement.innerText = myDays[daysIndex];
+
+    // date
+    const getDateElement = document.getElementById('date-date');
+    getDateElement.innerText = myDate.getDate();
 
     // month
     const getMonthElement = document.getElementById('date-month');

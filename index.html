@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Clock</title>
+
+    <!-- google font -->
+    
 </head>
 
 <style>
@@ -17,6 +20,7 @@
         justify-content: center;
         align-items: center;
         background-image: url(img/pexels-pixabay-531880.jpg);
+        user-select: none;
     }
     main {
         width: 90%;
@@ -34,12 +38,14 @@
         font-weight: 900;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        margin-top: 0;
+        padding-top: 0;
     }
 
     main .date-area, main .time-area, main .day-area {
         background-color: rgba(127, 255, 212, 0.308);
         padding: 10px;
-        font-size: 30px;
+        font-size: 40px;
         display: flex;
         justify-content: space-around;
         border-radius: 20px;
@@ -51,12 +57,16 @@
         border-radius: 10px;
     }
 
+    main .date-area {
+        font-size: 25px;
+    }
+
     main .day-area {
         color: white;
         margin-bottom: 20px;
         font-size: 20px;
-        font-family: Georgia, 'Times New Roman', Times, serif;
         background-color: rgba(215, 88, 66, 0.877);
+        letter-spacing: 5px;
     }
     main .identify {
         font-size: 10px;
@@ -77,18 +87,17 @@
     }
 </style>
 <body>
-
     <main>
         <h1>MyClock</h1>
 
         <section class="day-area">
             <div class="day" >
-                <span >Sunday</span>
+                <span id="day-day" >Sunday</span>
             </div>
         </section>
         <section class="date-area">
             <div class="date day">
-                <span  id="date-day">22</span>
+                <span  id="date-date">22</span>
             </div>
             <div class="date month">
                 <span id="date-month">Januaray</span>
@@ -119,8 +128,6 @@
         </section>
     </main>
 
-
-    
     <script src="index.js"></script>
 </body>
 </html>
