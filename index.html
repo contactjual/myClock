@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Clock</title>
 
     <!-- google font -->
-    
+
 </head>
 
 <style>
@@ -20,8 +21,12 @@
         justify-content: center;
         align-items: center;
         background-image: url(img/pexels-pixabay-531880.jpg);
+        background-repeat: no-repeat;
+        background-size: cover 100%;
+        background-position: center;
         user-select: none;
     }
+
     main {
         width: 90%;
         text-align: center;
@@ -31,6 +36,7 @@
         border-radius: 20px;
         box-shadow: 5px 5px 100px rgba(0, 128, 0, 0.526), -5px -5px 100px green;
     }
+
     h1 {
         background: linear-gradient(100deg, rgb(58, 255, 107), rgb(239, 33, 33), rgb(75, 225, 75));
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -42,7 +48,9 @@
         padding-top: 0;
     }
 
-    main .date-area, main .time-area, main .day-area {
+    main .date-area,
+    main .time-area,
+    main .day-area {
         background-color: rgba(127, 255, 212, 0.308);
         padding: 10px;
         font-size: 40px;
@@ -50,7 +58,9 @@
         justify-content: space-around;
         border-radius: 20px;
     }
-    main .date, main .time {
+
+    main .date,
+    main .time {
         background-color: rgba(215, 88, 66, 0.877);
         color: white;
         padding: 10px;
@@ -68,36 +78,75 @@
         background-color: rgba(215, 88, 66, 0.877);
         letter-spacing: 5px;
     }
+
     main .identify {
         font-size: 10px;
     }
+
     main .time span {
         display: block;
     }
+
     main .time {
         padding: 10px 40px;
     }
+
     main .dot {
         margin: -15px 0 0 0;
         font-size: 60px;
         color: white;
     }
+
     main .time-area {
         margin-top: 20px;
     }
+
+
+    /* responsive  */
+    @media screen and (max-width: 610px) {
+        main .time {
+            padding: 5px 20px;
+        }
+
+        main .dot {
+            margin: 0px 0 0 0;
+            font-size: 50px;
+        }
+
+        main {
+            width: 100%;
+            max-width: 300px;
+            box-shadow: none;
+        }
+
+        h1 {
+            font-size: 70px;
+        }
+
+        main .date-area {
+            font-size: 22px;
+        }
+    }
+
+    @media screen and (max-width: 405px) {
+        main {
+            padding: 20px 10px;
+        }
+    }
 </style>
+
 <body>
     <main>
         <h1>MyClock</h1>
 
         <section class="day-area">
-            <div class="day" >
-                <span id="day-day" >Sunday</span>
+            <div class="day">
+                <span id="day-day">Sunday</span>
             </div>
         </section>
         <section class="date-area">
             <div class="date day">
-                <span  id="date-date">22</span>
+                <span id="date-date">22</span>
             </div>
             <div class="date month">
                 <span id="date-month">Januaray</span>
@@ -130,4 +179,5 @@
 
     <script src="index.js"></script>
 </body>
+
 </html>
